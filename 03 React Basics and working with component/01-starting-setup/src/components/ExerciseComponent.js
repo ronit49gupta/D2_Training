@@ -5,7 +5,7 @@
 //    "First exercise - done!" on the screen.
 // 3. Use the empty ExerciseComponent.js file for your new component code 
 // and output this component inside the already existing App component.
-import React from "react";
+import React from "react"; 
 
 function ExerciseComponent(){
     return <h1>First exercise - done!</h1>
