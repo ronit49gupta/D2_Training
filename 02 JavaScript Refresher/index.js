@@ -10,16 +10,36 @@
 
 // 4. Return the calculated result
 
+
 function combine(a, b, c){
     const calculatedValue = a*b/c;
     return calculatedValue;
 }
 
+// Converting combine function to arrow function
+const combineArrowFunction = (a, b, c) => calculatedValue = a*b/c;
+
+// or Expanded Arrow function
+const combineArrowFunctionExpanded = (a, b, c) => {
+    return calculatedValue = a*b/c;
+}
+
+// combine function with default values (if we dont give any values to a, b, c)
+const combineWithDefaultValues = (a = 5, b = 10, c = 20) => {
+    return calculatedValue = a*b/c;
+}
+
+
+
 const result1 = combine(5, 10, 20);
-const result2 = combine(30, 20, 15);
+const result2 = combineArrowFunction(30, 20, 15);
+const result3 = combineArrowFunctionExpanded(50, 20, 100);
+const result4 = combineWithDefaultValues();
+
 console.log(result1);
 console.log(result2);
-
+console.log(result3);
+console.log(result4);
 
 // Coding Exercise 2: Exercise Array Methods
 
@@ -33,9 +53,34 @@ console.log(result2);
 // should return [{val: 1}, {val: 2}, {val: 3}].
 
 function transformToObjects(numberArray) {
-    const numberArrayEdited = numberArray.map((item)=>({val:item}));
-    return numberArrayEdited;
+    // Checking condition that Array is not undefiend and null
+    if(numberArray && numberArray.length > 0){
+        // const numberArrayEdited = numberArray.map((item)=>({val:item}));
+        // return numberArrayEdited;
+
+        // Newly returned array I have to double the numbers which are greater than 1
+        return numberArrayEdited = numberArray.map((item) => item > 1 ? item * 2 : item);
+    }
+    else {
+        console.log("Array is not defined or may be empty.");
+    }
 }
 
 const transformedArray = transformToObjects([1, 2, 3]);
 console.log(transformedArray);
+
+// Extra Practice
+
+// 1. Write a program to merge [123] [54321] 
+// 2. Output should be [1,2,3,4,5] unique values and sorted in ascending order
+
+const arrayFirst = [1,2,3];
+const arraySecond = [5,4,3,2,1];
+
+const mergeArray = (firstArray ,secondArray) => {
+    const mergedArray = [...firstArray, ...secondArray];
+    const uniqueSortedArray = [...new Set(mergedArray)].sort((a,b)=> a-b);
+    console.log(uniqueSortedArray);
+}
+
+mergeArray(arrayFirst,arraySecond);
