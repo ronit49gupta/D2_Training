@@ -1,0 +1,9 @@
+.product h2,
+.product p {
+    margin: 0.5rem 0;
+}
+
+.price {
+    font-size: 0.75rem;
+    color: #bab6b6;
+}
