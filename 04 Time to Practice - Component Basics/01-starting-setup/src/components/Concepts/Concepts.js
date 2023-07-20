@@ -7,9 +7,9 @@ const Concepts = (props) =>{
         <ul id="concepts">
             {props.item.map(item => (
                 <ConceptItems 
-                    title={props.title}
-                    image={props.image}
-                    desc={props.description}
+                    title={item.title}
+                    image={item.image}
+                    desc={item.description}
                 />  
             ))}
         </ul>

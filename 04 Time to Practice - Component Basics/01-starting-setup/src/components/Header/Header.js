@@ -1,6 +1,6 @@
 import React from "react";
 import './Header.css';
-import keyConceptsImage from '../assets/images/key-concepts.png';
+import keyConceptsImage from '../../assets/images/key-concepts.png';
 
 const Header = () => {
     return (
