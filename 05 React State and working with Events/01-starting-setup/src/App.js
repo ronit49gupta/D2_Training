@@ -46,6 +46,7 @@
 
 
 import React, { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 function App() {
   // coding exercise 7 start
@@ -66,17 +67,17 @@ function App() {
   
   
   // coding exercise 9 start
-  let defaultValidityMessage = "Invalid";
+  let defaultValidityMessage = <FormattedMessage id='app.validity' defaultMessage="Invalid" values={{validity : 'Invalid'}}/>;
 
   const [validityMessage, setValidityMessage] = useState(defaultValidityMessage);
   
   const checkValidityHandler = (event) => {
     const inputValue = event.target.value
     if (inputValue.trim().length < 3) {
-      const validityMessage = "Invalid";
+      const validityMessage = <FormattedMessage id='app.validity' defaultMessage="Invalid" values={{validity : 'Invalid'}}/>;
       setValidityMessage(validityMessage)
     } else {
-      const validityMessage = "Valid";
+      const validityMessage = <FormattedMessage id='app.validity' defaultMessage="Valid" values={{validity : 'Valid'}}/>;
       setValidityMessage(validityMessage)
     }
   };
@@ -95,9 +96,13 @@ function App() {
   
   return (
     <div>
-
       {/* coding exercise 7 start */}
-      <button onClick={clickHandler}>Bookmark</button>
+      <button onClick={clickHandler}>
+        <FormattedMessage
+          id='app.bookmark'
+          defaultMessage="Bookmark"
+        />
+      </button>
       {/* coding exercise 7 end */}
 
 
@@ -105,15 +110,25 @@ function App() {
       {/* coding exercise 8 start */}
       <div>
         <p>{price}</p>
-        <button onClick={changePrice}>Apply Discount</button>
+        <button onClick={changePrice}>
+          <FormattedMessage
+            id='app.discount'
+            defaultMessage="Apply Discount"
+          />
+        </button>
       </div>
       {/* coding exercise 8 end */}
 
 
       {/* coding exercise 9 start */}
       <form>
-          <label>Your message</label>
-          <input type="text" onChange={checkValidityHandler}/>
+          <label htmlFor='yourMessage'>
+            <FormattedMessage 
+              id='app.messageLabel' 
+              defaultMessage="Your message"
+            />
+          </label>
+          <input id='yourMessage' type="text" onChange={checkValidityHandler}/>
           <p>{validityMessage}</p>
       </form>
       {/* coding exercise 9 end */}
@@ -122,7 +137,13 @@ function App() {
       {/* coding exercise 10 Start */}
       <div>
         <p id="counter">{counterValue}</p>
-        <button onClick={incrementHandler}>Increment</button>
+        <button onClick={incrementHandler}>
+          <FormattedMessage 
+            id='app.condition' 
+            defaultMessage="Increment"
+            values = {{condition: 'Increment'}}
+          />
+        </button>
       </div>
       {/* coding exercise 10 End */}
 
