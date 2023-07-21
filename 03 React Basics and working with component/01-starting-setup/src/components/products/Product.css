@@ -1,0 +1,18 @@
+.product h2,
+.product p {
+    margin: 0.5rem 0; 
+    /* 
+    Here: 
+    1em = 100% of parent CSS = Relative to parent element CSS
+    1rem = 100% of root = Relative to root (if root have font-size:16px then 1rem = 16px) 
+    vh = viewport height = screen height = window height (i.e. 100% vh = 100% screen/window height)
+    vw = viewport width = screen width = window width (i.e. 100% vw = 100% screen/window width)
+    px = Pixels (px) are normally 1/96th of 1 inch but also it is relative to the viewing device.
+         For low-dpi devices, 1px is one device pixel (dot) of the display.
+    */
+}
+
+.price {
+    font-size: 0.75rem;
+    color: #bab6b6;
+}
