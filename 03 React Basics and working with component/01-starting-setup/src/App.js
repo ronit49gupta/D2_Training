@@ -28,16 +28,13 @@ function App() {
 
       {/* Coding Exercise 5 code start */}
       <h1>My Demo Shop</h1>
-      <Product 
-        title={utils.products[0].title}
-        price={utils.products[0].price}
-        desc={utils.products[0].description}>
-      </Product>
-      <Product 
-        title={utils.products[1].title}
-        price={utils.products[1].price}
-        desc={utils.products[1].description}>
-      </Product>
+      {utils.products.map(items => (
+        <Product 
+          title={items.title}
+          price={items.price}
+          desc={items.description}>
+        </Product>
+      ))}
       {/* Coding Exercise 5 code end */}
     </div>
   );
