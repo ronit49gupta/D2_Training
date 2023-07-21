@@ -28,11 +28,11 @@ function App() {
 
       {/* Coding Exercise 5 code start */}
       <h1>My Demo Shop</h1>
-      {utils.products.map(items => (
+      {utils.products.map(item => (
         <Product 
-          title={items.title}
-          price={items.price}
-          desc={items.description}>
+          title={item.title}
+          price={item.price}
+          desc={item.description}>
         </Product>
       ))}
       {/* Coding Exercise 5 code end */}
