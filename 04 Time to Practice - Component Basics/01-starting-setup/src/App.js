@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Header/>
-      <Concepts item={utils.concepts}/>
+      <Concepts items={utils.concepts}/>
     </div>
   );
 }

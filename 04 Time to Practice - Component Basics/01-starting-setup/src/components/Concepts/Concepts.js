@@ -5,7 +5,7 @@ import './Concepts.css';
 const Concepts = (props) =>{
     return(
         <ul id="concepts">
-            {props.item.map(item => (
+            {props.items.map(item => (
                 <ConceptItems 
                     title={item.title}
                     image={item.image}
