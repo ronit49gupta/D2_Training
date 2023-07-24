@@ -1,0 +1,17 @@
+.concept img {
+    width: 6rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.concept h2 {
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.concept p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
