@@ -22,11 +22,7 @@ import React, { useState } from 'react';
 import Todo from './Todo';
 
 // Coding Exercise 11 Start
-const DUMMY_TODOS = [
-    'Learn React',
-    'Practice React',
-    'Profit!'
-];
+import * as utils from './utils';
 // Coding Exercise 11 End
 
 
@@ -49,7 +45,7 @@ function App() {
 
       {/* Coding Exercise 11 Start */}
       <ul>
-        {DUMMY_TODOS.map((item)=>(<Todo todoItems={item}></Todo>))}
+        {utils.DUMMY_TODOS.map((item)=>(<Todo todoItems={item}></Todo>))}
       </ul>
       {/* Coding Exercise 11 End */}
 
